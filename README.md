@@ -1,5 +1,7 @@
 # Life is life
 
+![Screenshot](screenshot.png)
+
 A game somewhat similar to Conway's Game of Life.
 
 There are 3 types of chunks: empty, grass and rock. Also there are 2 types of animals: cows and wolves. The rules are:
