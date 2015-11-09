@@ -88,13 +88,18 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Трава");
+        jRadioButton1.setText("Grass");
+        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton1ActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Травоядное");
+        jRadioButton2.setText("Cow");
 
         buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setText("Препятствие");
+        jRadioButton4.setText("Rock");
 
         jToggleButton1.setText("Pause");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -104,7 +109,7 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("Хищник");
+        jRadioButton3.setText("Wolf");
 
         jButton2.setText("cycles: go!");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -235,6 +240,10 @@ public class MainFrame extends javax.swing.JFrame {
         drawWorld();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton1ActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -290,7 +299,7 @@ public class MainFrame extends javax.swing.JFrame {
             Animal a = (Animal) world.animals.elementAt(i);
             g.setColor(Color.red); // Признак ошибки
             if (a.type == Animal.GRASSEATER) g.setColor(Color.yellow);
-            if (a.type == Animal.MEATEATER) g.setColor(Color.darkGray);
+            if (a.type == Animal.MEATEATER) g.setColor(Color.pink);
             g.fillRect(a.x * tilesize, a.y * tilesize, tilesize, tilesize);
         }
 

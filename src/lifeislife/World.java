@@ -50,7 +50,7 @@ public class World
 
     public void step(boolean verbose)
     {
-        if (verbose) System.out.println("Started step.");
+        if (verbose) System.out.println("Turn start.");
 
         if (verbose) System.out.println("Processing: random grass...");
         if (random.nextInt()%2==0)
@@ -150,7 +150,8 @@ public class World
             }
         }
 
-        if (verbose) System.out.println("Step end.");
+        if (verbose) System.out.println("Turn end.");
+        if (verbose) System.out.println("");
     }
 
     private int getTile(int x,int y)
